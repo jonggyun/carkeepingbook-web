@@ -14,6 +14,7 @@ export default NextAuth({
       authorization: {
         url: 'https://kauth.kakao.com/oauth/authorize',
         params: {
+          // 카카오 로그인은 OIDC를 지원하지 않는데, scope에 openid 값이 넘어가서 제거
           scope: undefined,
         },
       },
@@ -25,6 +26,7 @@ export default NextAuth({
             params,
             checks,
             {
+              // token 발급에 client_id, client_secret 값이 필요
               exchangeBody: {
                 client_id: process.env.KAKAO_ID,
                 client_secret: process.env.KAKAO_SECRET,
