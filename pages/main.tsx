@@ -1,6 +1,8 @@
-import { signOut } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 
 function Main() {
+  const { data } = useSession();
+  console.log('!!', data?.user);
   return (
     <div>
       <button type="button" onClick={() => signOut()}>

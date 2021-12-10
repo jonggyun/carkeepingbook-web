@@ -15,7 +15,7 @@ export default NextAuth({
         url: 'https://kauth.kakao.com/oauth/authorize',
         params: {
           // 카카오 로그인은 OIDC를 지원하지 않는데, scope에 openid 값이 넘어가서 제거
-          scope: undefined,
+          scope: 'profile_nickname, profile_image',
         },
       },
       token: {

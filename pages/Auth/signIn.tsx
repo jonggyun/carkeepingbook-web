@@ -1,13 +1,18 @@
 import Image from 'next/image';
 import { signIn } from 'next-auth/react';
 
-import KakaoLoginImage from '../../public/images/kakao_login_large_narrow.png';
+import GithubImage from 'public/images/github_mark_white.png';
 
 function SignIn() {
   return (
     <div className="h-full flex justify-center items-center">
-      <button type="button" onClick={() => signIn('kakao')}>
-        <Image className="hover:" src={KakaoLoginImage} alt="sign-in" />
+      <button
+        className="bg-black flex justify-center items-center text-white p-3 text-lg rounded-lg"
+        type="button"
+        onClick={() => signIn('github')}
+      >
+        <Image src={GithubImage} alt="sign-in" />
+        <span className="pl-2">Sign In with Github</span>
       </button>
     </div>
   );
