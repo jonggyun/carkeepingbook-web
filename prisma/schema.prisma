@@ -52,3 +52,14 @@ model Maintenance {
   price     Int
   memo      String
 }
+
+model PaymentType {
+  id    Int     @id @default(autoincrement())
+  type  Payment
+}
+
+enum Payment {
+  GAS
+  CAR_WARSH
+  MAINTENANCE
+}
