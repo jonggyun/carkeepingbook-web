@@ -56,6 +56,7 @@ model Maintenance {
 model PaymentType {
   id    Int     @id @default(autoincrement())
   type  Payment
+  name  String
 }
 
 enum Payment {
