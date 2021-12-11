@@ -61,6 +61,6 @@ model PaymentType {
 
 enum Payment {
   GAS
-  CAR_WARSH
+  CARWARSH
   MAINTENANCE
 }
